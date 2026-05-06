@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
 const getUserToken = async (token) => {
-    const decoded = jwt.verify(token, 'fatec-turma-a2026')
+    const decoded = jwt.verify(token, 'fatec-turma6-a2026')
     const userId = decoded.id
     const user = await User.findById({_id: userId})
     return user
